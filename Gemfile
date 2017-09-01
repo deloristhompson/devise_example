@@ -12,6 +12,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :doc do
+  gem 'sdoc', require: false
+end
+
 group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
@@ -20,6 +24,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'shoulda'
   gem 'valid_attribute'
+
+  gem 'quiet_assets'
 end
 
 group :production do
