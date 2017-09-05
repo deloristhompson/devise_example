@@ -10,7 +10,7 @@ feature 'sign up', %Q{
     # I must specify a password, and confirm that password.
     #  If I do not perform the above, I get an error message
     #  If I specify valid information, I register my account and am authenticated
-    scenario 'specifying valid and required information' do
+    scenario 'Specifying valid and required information' do
       visit root_path
       click_link 'Sign Up'
       fill_in 'First Name', with: 'John'
