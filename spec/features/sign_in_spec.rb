@@ -19,20 +19,20 @@ feature 'sign up', %Q{
       fill_in 'user_password', with: 'password'
       fill_in 'Password Confirmation', with: 'password'
       click_button 'Sign Up'
-      
+
       expect(page).to have_content("You're in!")
       expect(page).to have_content("Sign Out")
     end
 
     scenario 'required information is not supplied' do
 
-    visit root_path
-    click_link 'Sign Up'
-    click_button 'Sign Up'
+      visit root_path
+      click_link 'Sign Up'
+      click_button 'Sign Up'
 
-    expect(page).to have_content("can't be blank")
-    expect(page).to_not have_content("Sign Out")
-  end
+      expect(page).to have_content("can't be blank")
+      expect(page).to_not have_content("Sign Out")
+    end
 
     scenario 'password confirmation does not match confirmation' do
       visit root_path
