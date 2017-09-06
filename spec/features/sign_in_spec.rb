@@ -18,8 +18,8 @@ feature 'sign up', %Q{
       fill_in 'Email', with: 'user@example.com'
       fill_in 'user_password', with: 'password'
       fill_in 'Password Confirmation', with: 'password'
-
       click_button 'Sign Up'
+      
       expect(page).to have_content("You're in!")
       expect(page).to have_content("Sign Out")
     end
